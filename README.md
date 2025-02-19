@@ -9,7 +9,7 @@ This project focuses on building a predictive model to determine whether a custo
 - **Goal**: Predict term deposit subscription (`yes` or `no`).
 - **Dataset**: UCI Bank Marketing Dataset ([Link](https://archive.ics.uci.edu/dataset/222/bank+marketing)).
 - **Techniques**: Data preprocessing, feature engineering, exploratory data analysis (EDA), hyperparameter tuning.
-- **Best Model**: XGBoost, with an **F1-Macro Score of 0.93** and **ROC-AUC of 0.9678** after hyperparameter tuning.
+- **Best Model**: XGBoost, with an **F1-Macro Score of 0.9324** and **ROC-AUC of 0.9345** after hyperparameter tuning.
 
 ---
 
@@ -72,12 +72,12 @@ The dataset contains **17 input features**:
 - **Model Performance**:
 
   - Best Model: XGBoost
-  - **F1-Macro Score**: 0.93
-  - **ROC-AUC Score**: 0.9678
+  - **F1-Macro Score**: 0.9324
+  - **ROC-AUC Score**: 0.9345
 
 - **Feature Importance**:
 
-  - The most influential features were `housing` (has housing loan?), `marital` (marital status), and `loan` (has personal loan?).
+  - The most influential features were `housing` (has housing loan?), `marital_married` (is married?), `marital_single` (is single?), `month_mar` (is March?), and `month_apr` (is April?).
 
 - **Class Imbalance**:
   - Addressed severe class imbalance using SMOTE, ensuring the model performed well on both classes.
@@ -88,10 +88,10 @@ The dataset contains **17 input features**:
 
 - **Confusion Matrix**:
   - Showcases the performance of the best model on test data.
-    ![Confusion Matrix](image.png)
+    ![Confusion Matrix](Confusion-Matrix.png)
 - **Feature Importance Plot**:
   - Highlights key drivers of term deposit subscription.
-    ![Feature Importance Plot](image-1.png)
+    ![Feature Importance Plot](Feature-Importance.png)
 
 ---
 
@@ -100,7 +100,7 @@ The dataset contains **17 input features**:
 - **Programming Language**: Python
 - **Libraries**:
   - Data Processing: `pandas`, `numpy`
-  - Visualization: `matplotlib`, `seaborn`
+  - Visualization: `matplotlib`, `seaborn`, `missingno`
   - Machine Learning: `scikit-learn`, `XGBoost`
   - Imbalance Handling: `imblearn`
 
@@ -113,6 +113,8 @@ The dataset contains **17 input features**:
 ├── 📄 README.md                # Project documentation
 ├── 📄 Analysis.ipynb           # EDA, model training, and analysis
 ├── 📄 best_xgboost_model.pkl   # Saved XGBoost model
+├── 📊 Confusion-Matrix         # Confusion Matrix image
+├── 📊 Feature-Importance       # Feature Importance image
 ```
 
 ---
